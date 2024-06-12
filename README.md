@@ -54,5 +54,5 @@ Now it's clear. Issue 1 & install from source all same warning that we don't hav
 ## install source & header
 ```
 sudo apt update
-sudo apt install adduser apt-utils bash-completion bash bc bison build-essential ca-certificates cmake coreutils cpio curl device-tree-compiler dkms gcc less g++  vim util-linux python3-dev
+sudo apt install adduser apt-utils bash-completion bash bc bison build-essential ca-certificates cmake coreutils cpio curl device-tree-compiler dkms gcc less g++ vim util-linux python3-dev linux-headers-$(uname -r)
 ```
