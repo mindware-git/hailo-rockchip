@@ -38,5 +38,17 @@ When I got board, there are already installed packages.
 but I can see there is no driver, which is dkms error.  
 I tried re-install, they say failed with error.  
 `linux@linux:~$ cat /var/log/hailort-pcie-driver.deb.log`
+It turns out deb package has bug for no directory, no kernel header.  
+So I switch to install using source.  
+
+## Install driver using source
+```
+git clone https://github.com/hailo-ai/hailort-drivers.git && cd hailort-drivers
+cd linux/pcie
+make all
+sudo make install_dkms
+sudo modprobe hailo_pci
+```
+
 
 
