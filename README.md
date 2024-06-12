@@ -23,4 +23,12 @@ linux@linux:~$ hailortcli fw-control identify
 [HailoRT] [error] CHECK_SUCCESS failed with status=HAILO_PCIE_DRIVER_NOT_INSTALLED(64)
 [HailoRT CLI] [error] CHECK_SUCCESS failed with status=HAILO_PCIE_DRIVER_NOT_INSTALLED(64)
 
+linux@linux:~$ apt list | grep hailo
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+golang-github-hailocab-go-hostpool-dev/focal 0.0~git20160125.0.e80d13c-1 all
+hailort-pcie-driver/now 4.17.0 all [installed,local]
+hailort/now 4.17.0 arm64 [installed,local]
+
 ```
