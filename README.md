@@ -32,3 +32,11 @@ hailort-pcie-driver/now 4.17.0 all [installed,local]
 hailort/now 4.17.0 arm64 [installed,local]
 
 ```
+
+## Issue 1
+When I got board, there are already installed packages.  
+but I can see there is no driver, which is dkms error.  
+I tried re-install, they say failed with error.  
+`linux@linux:~$ cat /var/log/hailort-pcie-driver.deb.log`
+
+
