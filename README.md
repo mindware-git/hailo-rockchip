@@ -41,6 +41,13 @@ I tried re-install, they say failed with error.
 It turns out deb package has bug for no directory, no kernel header.  
 So I switch to install using source.  
 
+### Solution for Issue 1
+Kenrel version is too old. 4.xx.
+hailo-8 driver needs kernel & header for compile.  
+But Ubuntu don't have kernel source & header.  
+`sudo apt-get install linux-headers-$(uname -r)`
+check.  
+
 ## Install driver using source
 ```
 git clone https://github.com/hailo-ai/hailort-drivers.git && cd hailort-drivers
@@ -49,7 +56,7 @@ make all
 sudo make install_dkms
 sudo modprobe hailo_pci
 ```
-Now it's clear. Issue 1 & install from source all same warning that we don't have kernel source & header!!!
+Now it's clear. Issue 1 & install from source all same warning that we don't have kernel source & header!!!  
 
 ## install source & header
 ```
