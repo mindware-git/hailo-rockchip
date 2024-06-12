@@ -1,0 +1,106 @@
+######### Mon Jun  3 14:55:35 CST 2024 #########
+Could not test for SecureBoot, assuming SecureBoot is disabled on this machine.
+######### Mon Jun  3 14:55:35 CST 2024 #########
+/share/opt/hailo/linux/pcie /
+make[1]: *** /lib/modules/4.19.232//build: No such file or directory.  Stop.
+make: *** [Makefile:110: clean] Error 2
+Failed. Exited with status 2. See /var/log/hailort-pcie-driver.deb.log
+Failed at 40
+   37	}
+   38	
+   39	function compile_and_install_pcie_driver_with_dkms() {
+   40	    make clean &>> $LOG
+   41	    make install_dkms &>> $LOG || {
+   42	        echo "Failed to install PCIe driver to the DKMS tree. Trying to install PCIe driver without DKMS"
+   43	        compile_and_install_pcie_driver_without_dkms
+######### Mon Jun  3 14:58:58 CST 2024 #########
+/share/opt/hailo/linux/pcie /
+make[1]: *** /lib/modules/4.19.232//build: No such file or directory.  Stop.
+make: *** [Makefile:110: clean] Error 2
+Failed. Exited with status 2. See /var/log/hailort-pcie-driver.deb.log
+Failed at 48
+   45	}
+   46	
+   47	function compile_and_install_pcie_driver_without_dkms() {
+   48	    make clean &>> $LOG
+   49	    make all &>> $LOG
+   50	    make install &>> $LOG
+   51	}
+######### Mon 03 Jun 2024 03:06:18 PM CST #########
+Could not test for SecureBoot, assuming SecureBoot is disabled on this machine.
+######### Mon 03 Jun 2024 03:06:18 PM CST #########
+/share/opt/hailo/linux/pcie /
+######### Mon 03 Jun 2024 03:06:57 PM CST #########
+######### Mon 03 Jun 2024 03:06:57 PM CST #########
+Could not test for SecureBoot, assuming SecureBoot is disabled on this machine.
+######### Mon 03 Jun 2024 03:06:57 PM CST #########
+######### Mon 03 Jun 2024 03:06:57 PM CST #########
+/share/opt/hailo/linux/pcie /
+make[1]: *** /lib/modules/4.19.232//build: No such file or directory.  Stop.
+make: *** [Makefile:110: clean] Error 2
+Failed. Exited with status 2. See /var/log/hailort-pcie-driver.deb.log
+Failed at 40
+   37	}
+   38	
+   39	function compile_and_install_pcie_driver_with_dkms() {
+   40	    make clean &>> $LOG
+   41	    make install_dkms &>> $LOG || {
+   42	        echo "Failed to install PCIe driver to the DKMS tree. Trying to install PCIe driver without DKMS"
+   43	        compile_and_install_pcie_driver_without_dkms
+######### Mon 03 Jun 2024 03:11:39 PM CST #########
+######### Mon 03 Jun 2024 03:11:58 PM CST #########
+######### Mon 03 Jun 2024 03:11:58 PM CST #########
+Could not test for SecureBoot, assuming SecureBoot is disabled on this machine.
+######### Mon 03 Jun 2024 03:11:58 PM CST #########
+######### Mon 03 Jun 2024 03:11:59 PM CST #########
+/share/opt/hailo/linux/pcie /
+make[1]: *** /lib/modules/4.19.232//build: No such file or directory.  Stop.
+make: *** [Makefile:110: clean] Error 2
+Failed. Exited with status 2. See /var/log/hailort-pcie-driver.deb.log
+Failed at 40
+   37	}
+   38	
+   39	function compile_and_install_pcie_driver_with_dkms() {
+   40	    make clean &>> $LOG
+   41	    make install_dkms &>> $LOG || {
+   42	        echo "Failed to install PCIe driver to the DKMS tree. Trying to install PCIe driver without DKMS"
+   43	        compile_and_install_pcie_driver_without_dkms
+######### Tue Jun  4 07:05:40 CST 2024 #########
+/share/opt/hailo/linux/pcie /
+Failed. Exited with status 1. See /var/log/hailort-pcie-driver.deb.log
+Failed at 58
+   55	
+   56	    local prompt="Do you wish to use DKMS? [Y/n]: "
+   57	    while true; do
+   58	        read -s -p "$prompt" -n 1 -t 10 reply || (( $? > 128 ))
+   59	        echo ""
+   60	        case $reply in
+   61	            Y|y|"") compile_and_install_pcie_driver_with_dkms; break;;
+######### Tue Jun  4 09:38:49 CST 2024 #########
+/share/opt/hailo/linux/pcie /
+make[1]: *** /lib/modules/4.19.232//build: No such file or directory.  Stop.
+make: *** [Makefile:110: clean] Error 2
+Failed. Exited with status 2. See /var/log/hailort-pcie-driver.deb.log
+Failed at 48
+   45	}
+   46	
+   47	function compile_and_install_pcie_driver_without_dkms() {
+   48	    make clean &>> $LOG
+   49	    make all &>> $LOG
+   50	    make install &>> $LOG
+   51	}
+######### Wed 12 Jun 2024 08:55:28 AM CST #########
+Could not test for SecureBoot, assuming SecureBoot is disabled on this machine.
+######### Wed 12 Jun 2024 08:55:29 AM CST #########
+/share/opt/hailo/linux/pcie /
+make[1]: *** /lib/modules/4.19.232//build: No such file or directory.  Stop.
+make: *** [Makefile:110: clean] Error 2
+Failed. Exited with status 2. See /var/log/hailort-pcie-driver.deb.log
+Failed at 40
+   37	}
+   38	
+   39	function compile_and_install_pcie_driver_with_dkms() {
+   40	    make clean &>> $LOG
+   41	    make install_dkms &>> $LOG || {
+   42	        echo "Failed to install PCIe driver to the DKMS tree. Trying to install PCIe driver without DKMS"
+   43	        compile_and_install_pcie_driver_without_dkms
