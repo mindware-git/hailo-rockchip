@@ -2,7 +2,7 @@
 Install hailo driveron rockcihp board.
 
 ## reference
-https://tlab.hongo.wide.ad.jp/2024/03/04/hailo-8-edge-ai-accelerator-deployment-guide/
+https://tlab.hongo.wide.ad.jp/2024/03/04/hailo-8-edge-ai-accelerator-deployment-guide/  
 https://community.hailo.ai/t/cant-install-hailo-pci-driver/117/5  
 https://community.hailo.ai/t/how-could-i-install-the-hailort-driver-into-rockchip-device-such-as-rk3588/124/2  
 
