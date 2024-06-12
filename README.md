@@ -3,6 +3,8 @@ Install hailo driveron rockcihp board.
 
 ## reference
 https://tlab.hongo.wide.ad.jp/2024/03/04/hailo-8-edge-ai-accelerator-deployment-guide/
+https://community.hailo.ai/t/cant-install-hailo-pci-driver/117/5  
+https://community.hailo.ai/t/how-could-i-install-the-hailort-driver-into-rockchip-device-such-as-rk3588/124/2  
 
 ## When I got the board
 ```
@@ -37,7 +39,7 @@ hailort/now 4.17.0 arm64 [installed,local]
 When I got board, there are already installed packages.  
 but I can see there is no driver, which is dkms error.  
 I tried re-install, they say failed with error.  
-`linux@linux:~$ cat /var/log/hailort-pcie-driver.deb.log`
+`linux@linux:~$ cat /var/log/hailort-pcie-driver.deb.log`  
 It turns out deb package has bug for no directory, no kernel header.  
 So I switch to install using source.  
 
