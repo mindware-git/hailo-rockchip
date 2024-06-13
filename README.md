@@ -38,7 +38,8 @@ hailort/now 4.17.0 arm64 [installed,local]
 ## install source & header
 ```
 sudo apt update
-sudo apt install adduser apt-utils bash-completion bash bc bison build-essential ca-certificates cmake coreutils cpio curl device-tree-compiler dkms gcc less g++ vim util-linux python3-dev python python-dev
+sudo apt install adduser apt-utils bash-completion bash bc bison build-essential ca-certificates cmake coreutils cpio curl device-tree-compiler dkms gcc less g++ vim util-linux python3-dev python python-dev \
+flex
 ```
 
 ## Issue 1
@@ -57,6 +58,7 @@ But Ubuntu don't have kernel source & header.
 check.  
 
 Get linux header from vendor  
+`cd /usr/src/linux-headers-$(uname -r) && sudo make clean && sudo make modules_prepare`
 `sudo dpkg -i linux-headers-4.19.232_4.19.232-86_arm64.deb`  
 `sudo ln -s /usr/src/linux-headers-$(uname -r) /lib/modules/$(uname -r)/build`
 
