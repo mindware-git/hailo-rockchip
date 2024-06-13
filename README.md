@@ -50,6 +50,10 @@ But Ubuntu don't have kernel source & header.
 `sudo apt-get install linux-headers-$(uname -r)`
 check.  
 
+Get linux header from vendor  
+`sudo dpkg -i linux-headers-4.19.232_4.19.232-86_arm64.deb`  
+
+
 ## Install driver using source
 ```
 git clone https://github.com/hailo-ai/hailort-drivers.git && cd hailort-drivers
