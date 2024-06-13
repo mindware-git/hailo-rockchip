@@ -53,11 +53,14 @@ sudo ln -s /usr/src/linux-headers-$(uname -r) /lib/modules/$(uname -r)/build
 ```
 
 ## Install driver using source
+*warning: do not install dkms! It will not boot.*
+sudo make install_dkms -> This is really problem.
+
 ```
 git clone https://github.com/hailo-ai/hailort-drivers.git && cd hailort-drivers
 cd linux/pcie
 make all
-sudo make install_dkms
+
 sudo modprobe hailo_pci
 ```
 
