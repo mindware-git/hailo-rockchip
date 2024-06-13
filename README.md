@@ -52,7 +52,7 @@ check.
 
 Get linux header from vendor  
 `sudo dpkg -i linux-headers-4.19.232_4.19.232-86_arm64.deb`  
-
+`sudo ln -s /usr/src/linux-headers-$(uname -r) /lib/modules/$(uname -r)/build`
 
 ## Install driver using source
 ```
