@@ -33,6 +33,12 @@ golang-github-hailocab-go-hostpool-dev/focal 0.0~git20160125.0.e80d13c-1 all
 hailort-pcie-driver/now 4.17.0 all [installed,local]
 hailort/now 4.17.0 arm64 [installed,local]
 
+
+```
+## install source & header
+```
+sudo apt update
+sudo apt install adduser apt-utils bash-completion bash bc bison build-essential ca-certificates cmake coreutils cpio curl device-tree-compiler dkms gcc less g++ vim util-linux python3-dev python python-dev
 ```
 
 ## Issue 1
@@ -64,8 +70,3 @@ sudo modprobe hailo_pci
 ```
 Now it's clear. Issue 1 & install from source all same warning that we don't have kernel source & header!!!  
 
-## install source & header
-```
-sudo apt update
-sudo apt install adduser apt-utils bash-completion bash bc bison build-essential ca-certificates cmake coreutils cpio curl device-tree-compiler dkms gcc less g++ vim util-linux python3-dev linux-headers-$(uname -r)
-```
