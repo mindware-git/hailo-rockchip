@@ -38,8 +38,10 @@ hailort/now 4.17.0 arm64 [installed,local]
 ## install source & header
 ```
 sudo apt update
-sudo apt install adduser apt-utils bash-completion bash bc bison build-essential ca-certificates cmake coreutils cpio curl device-tree-compiler dkms gcc less g++ vim util-linux python3-dev python python-dev \
-flex
+sudo apt install adduser apt-utils bash-completion bash bc bison \
+build-essential ca-certificates cmake coreutils cpio curl device-tree-compiler \
+dkms gcc less g++ vim util-linux python3-dev python python-dev \
+flex make
 ```
 
 ## Issue 1
@@ -56,10 +58,16 @@ hailo-8 driver needs kernel & header for compile.
 But Ubuntu don't have kernel source & header.  
 `sudo apt-get install linux-headers-$(uname -r)`
 check.  
+Ubuntu에 제공되는 헤더가 없음 따라서 벤더에게서 받아야함  
 
 Get linux header from vendor  
+벤더에게서 받은 헤더 설치  
 `sudo dpkg -i linux-headers-4.19.232_4.19.232-86_arm64.deb`  
 
+명령어 설명
+벤더에게서 받은 헤더가 불완전함. 따라서 다시 스크립트를 이용해야함.  
+su - 는 root로 가는 명령어이다. 비밀번호는 root  
+이후 헤더 조정을 위한 make 명령어들  
 ```
 su -
 cd /usr/src/linux-headers-$(uname -r)
@@ -67,7 +75,10 @@ make headers_check
 make headers_install
 make scripts
 ```
+*여기서도 에러가 발생함.*  
+missing file들이 존재함.  
 
+심볼릭 링크를 제공해주어서 및에서 hailort-driver에서 접근할 수 있게 해줌.  
 `sudo ln -s /usr/src/linux-headers-$(uname -r) /lib/modules/$(uname -r)/build`
 
 ## Install driver using source
