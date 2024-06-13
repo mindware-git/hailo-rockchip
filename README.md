@@ -60,8 +60,8 @@ sudo make install_dkms -> This is really problem.
 git clone https://github.com/hailo-ai/hailort-drivers.git && cd hailort-drivers
 cd linux/pcie
 make all
-
-sudo insmod hailo_pci.ko
+sudo make install
+sudo modprobe hailo_pci
 ```
 
 ## install firmware & udev rule
