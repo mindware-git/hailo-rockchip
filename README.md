@@ -61,7 +61,7 @@ git clone https://github.com/hailo-ai/hailort-drivers.git && cd hailort-drivers
 cd linux/pcie
 make all
 
-sudo modprobe hailo_pci
+sudo insmod hailo_pci.ko
 ```
 
 ## install firmware & udev rule
