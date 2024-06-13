@@ -70,8 +70,32 @@ excute script ./download_firmware.sh to download hailo8 firmware bin.
 sudo mv hailo8_fw.4.xx.0.bin /lib/firmware/hailo/hailo8_fw.bin 
 sudo cp 51-hailo-udev.rules /etc/udev/rules.d/
 ```
+## Attempt 1
+벤더사에서 받은 커널 헤드를 기반으로 빌드 성공.  
+처음 dkms 를 이용하여 부팅을 시도하였더니 rockchip kernel이라는 로고만 뜨고 부팅이 안됨.  
+pcie를 보드에서 제거하니 다시 부팅이 되기 시작했음.  
+이상하다 생각해서 dkms를 제거하였더니 pcie 장착 후에도 부팅이 되기 시작.  
 
-# Old history
+## Attempt 2
+앞에서 시도로 커널 드라이버가 무언가 잘못되고 있다는 것을 직감했음.  
+그래서 dkms 후 부팅이 아니라 modprobe로 run-time 로드를 시도해봄.  
+*맨 처음 modprobe 시 /dev/halio 라는 노드가 장착 되었었음.*  
+따라서 성공한 줄 알고 재부팅 하였으나 그떄 부터 노드도 보이지 않고, 모듈이 적재만 될 뿐 아무런 반응이 없음.  
+첨부된 test.log 를 보면 마지막 부분에 펌웨어도 정상적으로 존재하나, 
+```
+[   86.730303] hailo_pci: loading out-of-tree module taints kernel.
+[   86.734832] hailo: Init module. driver version 4.17.1
+```
+만 나오고 아무런 반응이 없음.  
+init exit 로그만 나올 뿐 실제로 char 노드가 붙지 않는 것으로 예상 됨.
+
+## 결론
+아마 커널에서 pcie 에서 불안전하게 돌아가던 드라이버가 최초 적재 되고 난 후,
+펌웨어간의 통신 중 무언가 에러가 나서 이후로는 작동이 안된다고 추론 중.
+실제 dmesg에서 pcie 관련 에러가 많이 나오는 것으로 보이고,  
+부팅 자체가 안되는 것은 시리얼 케이블을 이용해서 부팅로그를 보면 더 자세히 알 수 있을 듯.  
+
+## Old history
 
 ## Issue 1
 When I got board, there are already installed packages.  
