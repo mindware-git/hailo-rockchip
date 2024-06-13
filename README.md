@@ -58,8 +58,16 @@ But Ubuntu don't have kernel source & header.
 check.  
 
 Get linux header from vendor  
-`cd /usr/src/linux-headers-$(uname -r) && sudo make clean && sudo make modules_prepare`
 `sudo dpkg -i linux-headers-4.19.232_4.19.232-86_arm64.deb`  
+
+```
+su -
+cd /usr/src/linux-headers-$(uname -r)
+make headers_check
+make headers_install
+make scripts
+```
+
 `sudo ln -s /usr/src/linux-headers-$(uname -r) /lib/modules/$(uname -r)/build`
 
 ## Install driver using source
