@@ -61,6 +61,13 @@ sudo make install_dkms
 sudo modprobe hailo_pci
 ```
 
+## install firmware & udev rule
+excute script ./download_firmware.sh to download hailo8 firmware bin.  
+```
+sudo mv hailo8_fw.4.xx.0.bin /lib/firmware/hailo/hailo8_fw.bin 
+sudo cp 51-hailo-udev.rules /etc/udev/rules.d/
+```
+
 # Old history
 
 ## Issue 1
