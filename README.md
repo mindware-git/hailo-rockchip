@@ -44,6 +44,25 @@ dkms gcc less g++ vim util-linux python3-dev python python-dev \
 flex make
 ```
 
+## install linux header
+unzip linux header from vendor.  
+```
+unzip linux-headers-4.19.232.zip
+sudo cp -r linux-headers-4.19.232 /usr/src/
+sudo ln -s /usr/src/linux-headers-$(uname -r) /lib/modules/$(uname -r)/build
+```
+
+## Install driver using source
+```
+git clone https://github.com/hailo-ai/hailort-drivers.git && cd hailort-drivers
+cd linux/pcie
+make all
+sudo make install_dkms
+sudo modprobe hailo_pci
+```
+
+# Old history
+
 ## Issue 1
 When I got board, there are already installed packages.  
 but I can see there is no driver, which is dkms error.  
@@ -81,13 +100,4 @@ missing file들이 존재함.
 심볼릭 링크를 제공해주어서 및에서 hailort-driver에서 접근할 수 있게 해줌.  
 `sudo ln -s /usr/src/linux-headers-$(uname -r) /lib/modules/$(uname -r)/build`
 
-## Install driver using source
-```
-git clone https://github.com/hailo-ai/hailort-drivers.git && cd hailort-drivers
-cd linux/pcie
-make all
-sudo make install_dkms
-sudo modprobe hailo_pci
-```
-Now it's clear. Issue 1 & install from source all same warning that we don't have kernel source & header!!!  
 
