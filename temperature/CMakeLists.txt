@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.10)
 project(Temp)
 
 # C++ 표준 설정
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 
 # 실행 파일 생성
 add_executable(get_temp main.cpp)
