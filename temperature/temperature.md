@@ -1,11 +1,24 @@
+## 요구사항
+
+Hailort를 이용하여 cpp로 된 온도 측정 프로그램을 작성.
+
+## 빌드 방법
+
+```
+$ cd temperature
+$ ./build.sh
+$ ./build/get_temp
+```
+
 ## system info
 
+```
 maverick@maverick-BQM5:~/Documents/hailo-rockchip/temperature$ lsb_release -a
 No LSB modules are available.
-Distributor ID:	Ubuntu
-Description:	Ubuntu 22.04.5 LTS
-Release:	22.04
-Codename:	jammy
+Distributor ID: Ubuntu
+Description: Ubuntu 22.04.5 LTS
+Release: 22.04
+Codename: jammy
 
 maverick@maverick-BQM5:~/Documents/hailo-rockchip/temperature$ hailortcli -v
 HailoRT-CLI version 4.19.0
@@ -22,16 +35,4 @@ hailort/now 4.19.0 amd64 [installed,local]
 /usr/include/hailo/hailort.h
 /usr/lib/libhailort.so.4.19.0
 /usr/lib/libhailort.so
-
-In hailort/libhailort/include/hailo/hailort.h
-```
-/**
- * Get temperature information on the device
- *
- * @param[in] device          A ::hailo_device object.
- * @param[out] temp_info      A @a hailo_chip_temperature_info_t to be filled.
- * @return Upon success, returns ::HAILO_SUCCESS. Otherwise, returns a ::hailo_status error.
- * @note Temperature in Celsius of the 2 internal temperature sensors (TS).
- */
-HAILORTAPI hailo_status hailo_get_chip_temperature(hailo_device device, hailo_chip_temperature_info_t *temp_info);
 ```
