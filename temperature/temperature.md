@@ -10,6 +10,14 @@ $ ./build.sh
 $ ./build/get_temp
 ```
 
+## Output
+```
+Chip temperature: 
+ts0_temperature :21.4321C
+ts1_temperature :21.5332C
+sample_count :57066
+```
+
 ## system info
 
 ```

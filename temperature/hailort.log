@@ -1,0 +1,12 @@
+[2024-12-24 21:02:47.384] [1992] [HailoRT] [info] [device.cpp:51] [Device] OS Version: Linux 6.8.0-48-generic #48~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Oct  7 11:24:13 UTC 2 x86_64
+[2024-12-24 21:02:47.389] [1992] [HailoRT] [info] [control.cpp:109] [control__parse_identify_results] firmware_version is: 4.19.0
+[2024-12-24 21:02:47.389] [1992] [HailoRT] [info] [vdevice.cpp:655] [create] VDevice Infos: 0000:01:00.0
+[2024-12-24 21:03:33.722] [2383] [HailoRT] [info] [device.cpp:51] [Device] OS Version: Linux 6.8.0-48-generic #48~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Oct  7 11:24:13 UTC 2 x86_64
+[2024-12-24 21:03:33.726] [2383] [HailoRT] [info] [control.cpp:109] [control__parse_identify_results] firmware_version is: 4.19.0
+[2024-12-24 21:03:33.727] [2383] [HailoRT] [info] [vdevice.cpp:655] [create] VDevice Infos: 0000:01:00.0
+[2024-12-24 21:04:39.372] [2459] [HailoRT] [info] [device.cpp:51] [Device] OS Version: Linux 6.8.0-48-generic #48~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Oct  7 11:24:13 UTC 2 x86_64
+[2024-12-24 21:04:39.377] [2459] [HailoRT] [info] [control.cpp:109] [control__parse_identify_results] firmware_version is: 4.19.0
+[2024-12-24 21:04:39.377] [2459] [HailoRT] [info] [vdevice.cpp:655] [create] VDevice Infos: 0000:01:00.0
+[2024-12-24 21:05:04.553] [2501] [HailoRT] [info] [device.cpp:51] [Device] OS Version: Linux 6.8.0-48-generic #48~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Oct  7 11:24:13 UTC 2 x86_64
+[2024-12-24 21:05:04.557] [2501] [HailoRT] [info] [control.cpp:109] [control__parse_identify_results] firmware_version is: 4.19.0
+[2024-12-24 21:05:04.557] [2501] [HailoRT] [info] [vdevice.cpp:655] [create] VDevice Infos: 0000:01:00.0

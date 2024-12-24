@@ -46,9 +46,9 @@ int main()
         }
 
         auto temp = thermal_res.value();
-        std::cout << "Chip temperature: "
-                  << "ts0_temperature :" << temp.ts0_temperature
-                  << "ts1_temperature :" << temp.ts1_temperature
+        std::cout << "Chip temperature: " << std::endl
+                  << "ts0_temperature :" << temp.ts0_temperature << "C" << std::endl
+                  << "ts1_temperature :" << temp.ts1_temperature << "C" << std::endl
                   << "sample_count :" << temp.sample_count
                   << std::endl;
     }
